@@ -1,4 +1,16 @@
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 15:29:40 by oguner            #+#    #+#             */
+/*   Updated: 2024/11/16 15:51:31 by oguner           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*ptr1;

@@ -1,4 +1,16 @@
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 15:29:42 by oguner            #+#    #+#             */
+/*   Updated: 2024/11/16 15:51:20 by oguner           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 char* ft_strnstr(const char* haystack, const char* needle, size_t len)
 {	
 	if(*needle == '\0')

@@ -1,5 +1,16 @@
-#include <stddef.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 15:28:53 by oguner            #+#    #+#             */
+/*   Updated: 2024/11/16 15:54:55 by oguner           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 void *ft_memmove(void *dst, const void *src, size_t len)
 {
 	if (!dst && !src)

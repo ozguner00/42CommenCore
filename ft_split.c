@@ -1,98 +1,71 @@
+#include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
-int ft_split_size(char const *str, char c)
+
+static int	letter_count(const char *s, char c)
 {
-	int count = 0;
-	int key = 0;
-	while (*str != '\0')
+	int	i;
+
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
+}
+
+static int	word_count(const char *s, char c)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (s[i])
 	{
-		if(*str != c)
-			key = 1;
-		else if(*str == c && key)
+		if (s[i] != c)
 		{
 			count++;
-			key = 0;
+			i += letter_count(s + i, c);
 		}
-		str++;
-	}
-	if(key)
-		count++;
-	return count;
-}
-char *ft_create_tokens(char* str, char c, int* begin_index)
-{
-	while(str[*begin_index] == c && str[*begin_index] != '\0')
-		(*begin_index)++;
-
-	int last_index = *begin_index;
-
-	while (str[last_index] != c && str[last_index] != '\0')	
-		last_index++;
-
-	if(last_index != *begin_index)
-	{
-		char* token = malloc(last_index - *begin_index + 1);
-		if(token == NULL)
-			return NULL;
-		int i = 0;
-		while(*begin_index < last_index && str[*begin_index] != c)
-		{	
-			token[i] = str[*begin_index];
+		else
 			i++;
-			(*begin_index)++;
-		}
-		token[i] = '\0';	
-		return token;
 	}
-
-	return NULL;
+	return (count);
 }
-void free_split(char** split)
+
+static char	**free_arr(char **arr, int i)
 {
-	char **splitt = split;
-	while(*splitt != NULL)
+	while (i >= 0)
 	{
-		free(*splitt);
-		splitt++;
+		free(arr[i]);
+		i--;
 	}
-	free(split);
+	free(arr);
+	return (0);
 }
-char **ft_split(char const *str, char c)
-{	if(str == NULL)
-		return NULL;	
-	int split_size = ft_split_size(str,c);
-	char** split_tokens = (char**) malloc(sizeof(char*) * (split_size + 1));
-	if(split_tokens == NULL)
-		return NULL;
-	int begin = 0;
-	int i = 0;
-	while(split_size > 0)
-	{	
-		char* token = ft_create_tokens((char*)str,c,&begin);
-		if(token == NULL)
-		{	
-			free_split(split_tokens);
-			return NULL;			
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+	int		i;
+
+	if (!s)
+		return (0);
+	arr = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
+	if (!arr)
+		return (0);
+	i = 0;
+	while (*s)
+	{
+		if (*s == c)
+			s++;
+		else
+		{
+			arr[i] = ft_substr(s, 0, letter_count(s, c));
+			if (!arr[i])
+				return (free_arr(arr, i - 1));
+			s += letter_count(s, c);
+			i++;
 		}
-		split_tokens[i] = token;
-		split_size--;
-		i++;
 	}
-	split_tokens[i]=NULL;
-		
-	return split_tokens;
+	arr[i] = 0;
+	return (arr);
 }
-/*
-int main(int ac, char** arg)
-{	
-
-	printf("Kelime sayısı : %d\n", ft_split_size(arg[1],' '));
-	char ** str = ft_split(arg[1],' ');
-	while(*str != NULL)
-	{
-		printf("%s\n",*str);
-		str++;
-	}
-	return 0;
-}*/
-

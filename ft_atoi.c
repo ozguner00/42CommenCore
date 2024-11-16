@@ -1,30 +1,55 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 15:06:26 by oguner            #+#    #+#             */
+/*   Updated: 2024/11/16 15:58:05 by oguner           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+static void ft_skip_and_sign(const char *str, int *index, int *sign)
+{
+    *index = 0;
+    *sign = 1;
+
+    while ((str[*index] == ' ' || (str[*index] >= 9 && str[*index] <= 13)))
+        (*index)++;
+
+    if ((str[*index] == '-' || str[*index] == '+'))
+    {
+        if (str[*index] == '-')
+            *sign = -1;
+        (*index)++;
+    }
+}
+
+static int ft_parse_number(const char *str, int *index)
+{
+    int result = 0;
+    
+    while ((str[*index]) && (str[*index] >= '0' && str[*index] <= '9'))
+    {
+        result = result * 10 + str[*index] - '0';
+        (*index)++;
+    }
+    return result;
+}
+
 int ft_atoi(const char *str)
 {
-    int i = 0;
-    int sign = 1;
-    long long result = 0;
+    int result = 0;
+    int sign;
+    int index;
 
-    while (str[i] == '\t' || str[i] == '\r' || str[i] == ' ' ||
-           str[i] == '\f' || str[i] == '\v' || str[i] == '\n')
-        ++i;
+    ft_skip_and_sign(str, &index, &sign); 
+    result = ft_parse_number(str, &index);  
 
-    if (str[i] == '+' || str[i] == '-')
-    {
-        if (str[i] == '-')
-            sign = -1;
-        ++i;
-    }
-
-    while (str[i] >= '0' && str[i] <= '9')
-    {
-        result = result * 10 + (str[i] - '0');
-        if (result > 2147483647 && sign == 1)
-            return 2147483647;
-        if (result > 2147483648LL && sign == -1)
-            return -2147483648;
-        ++i;
-    }
-
-    return (int)(result * sign);
+    return sign * result;
 }
+
+
