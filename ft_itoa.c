@@ -6,14 +6,14 @@
 /*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:27:08 by oguner            #+#    #+#             */
-/*   Updated: 2024/11/16 18:30:37 by oguner           ###   ########.fr       */
+/*   Updated: 2024/11/16 19:43:08 by oguner           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_zero(void)
+static	char	*ft_zero(void)
 {
 	char	*ptr;
 
@@ -26,7 +26,7 @@ char	*ft_zero(void)
 	return (ptr);
 }
 
-char	*ft_max_negative(void)
+static	char	*ft_max_negative(void)
 {
 	char	*ptr;
 
@@ -49,7 +49,7 @@ char	*ft_max_negative(void)
 	return (ptr);
 }
 
-int	get_num_len(int n)
+static	int	get_num_len(int n)
 {
 	int	len;
 
