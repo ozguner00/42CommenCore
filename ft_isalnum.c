@@ -2,16 +2,15 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+        
-	+:+     */
-/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+      
-	+#+        */
-/*                                                +#+#+#+#+#+  
-	+#+           */
-/*   Created: 2024/11/16 15:26:54 by oguner            #+#    #+#             */
-/*   Updated: 2024/11/16 15:26:54 by oguner           ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/16 17:36:58 by oguner            #+#    #+#             */
+/*   Updated: 2024/11/16 17:36:58 by oguner           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

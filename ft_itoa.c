@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meaydino <meaydino@student.42kocaeli.com.t +#+  +:+       +#+        */
+/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:27:08 by oguner            #+#    #+#             */
-/*   Updated: 2024/11/16 16:25:27 by meaydino         ###   ########.fr       */
+/*   Updated: 2024/11/16 18:30:37 by oguner           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,12 @@ char	*ft_zero(void)
 	}
 	return (ptr);
 }
+
 char	*ft_max_negative(void)
 {
-	char *ptr = malloc(12 * sizeof(char)); // "-2147483648" + null
+	char	*ptr;
+
+	ptr = malloc(12 * sizeof(char));
 	if (ptr)
 	{
 		ptr[0] = '-';
@@ -45,28 +48,35 @@ char	*ft_max_negative(void)
 	}
 	return (ptr);
 }
+
+int	get_num_len(int n)
+{
+	int	len;
+
+	len = 0;
+	if (n < 0)
+	{
+		len++;
+		n = -n;
+	}
+	while (n > 0)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
+}
+
 char	*ft_itoa(int n)
 {
-	int		temp;
 	int		len;
 	char	*ptr;
 
-	temp = n;
-	len = 0;
 	if (n == 0)
 		return (ft_zero());
 	if (n == -2147483648)
 		return (ft_max_negative());
-	if (n < 0)
-	{
-		len++;
-		temp = -temp;
-	}
-	while (temp > 0)
-	{
-		temp = temp / 10;
-		len++;
-	}
+	len = get_num_len(n);
 	ptr = (char *)malloc((len + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);

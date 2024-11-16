@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meaydino <meaydino@student.42kocaeli.com.t +#+  +:+       +#+        */
+/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:28:46 by oguner            #+#    #+#             */
-/*   Updated: 2024/11/16 16:25:36 by meaydino         ###   ########.fr       */
+/*   Updated: 2024/11/16 17:37:18 by oguner           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (p[i] == value)
-			return (void *)(p + i);
+			return ((void *)(p + i));
 		i++;
 	}
 	return (0);

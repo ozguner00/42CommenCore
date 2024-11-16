@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meaydino <meaydino@student.42kocaeli.com.t +#+  +:+       +#+        */
+/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:28:43 by oguner            #+#    #+#             */
-/*   Updated: 2024/11/16 16:25:35 by meaydino         ###   ########.fr       */
+/*   Updated: 2024/11/16 17:37:17 by oguner           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

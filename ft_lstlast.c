@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meaydino <meaydino@student.42kocaeli.com.t +#+  +:+       +#+        */
+/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:28:36 by oguner            #+#    #+#             */
-/*   Updated: 2024/11/16 16:25:33 by meaydino         ###   ########.fr       */
+/*   Updated: 2024/11/16 17:37:14 by oguner           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

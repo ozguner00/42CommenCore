@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meaydino <meaydino@student.42kocaeli.com.t +#+  +:+       +#+        */
+/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:28:53 by oguner            #+#    #+#             */
-/*   Updated: 2024/11/16 16:25:37 by meaydino         ###   ########.fr       */
+/*   Updated: 2024/11/16 17:37:22 by oguner           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			p[i] = s[i];
 			i++;
 		}
+		return (dst);
 	}
-	else
+	i = len;
+	while (i > 0)
 	{
-		i = len;
-		while (i > 0)
-		{
-			p[i - 1] = s[i - 1];
-			i--;
-		}
+		p[i - 1] = s[i - 1];
+		i--;
 	}
 	return (dst);
 }
