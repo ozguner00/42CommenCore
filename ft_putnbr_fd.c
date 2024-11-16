@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: meaydino <meaydino@student.42kocaeli.com.t +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:29:02 by oguner            #+#    #+#             */
-/*   Updated: 2024/11/16 15:29:03 by oguner           ###   ########.fr       */
+/*   Updated: 2024/11/16 16:25:39 by meaydino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n < 0)

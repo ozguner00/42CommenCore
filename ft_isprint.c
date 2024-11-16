@@ -2,15 +2,18 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2024/11/16 15:27:04 by oguner            #+#    #+#             */
 /*   Updated: 2024/11/16 15:27:04 by oguner           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int ft_isprint(int c) {
-    return (c >= 32 && c <= 126);
+int	ft_isprint(int c)
+{
+	return (c >= 32 && c <= 126);
 }

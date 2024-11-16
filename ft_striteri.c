@@ -3,21 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: meaydino <meaydino@student.42kocaeli.com.t +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:29:25 by oguner            #+#    #+#             */
-/*   Updated: 2024/11/16 15:29:26 by oguner           ###   ########.fr       */
+/*   Updated: 2024/11/16 16:25:43 by meaydino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f) (unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	 if (s == 0 || f == 0)
-        return;
+	int	i;
 
-    int i = 0;
-    while (s[i] != '\0') {
-        f(i, &s[i]);
-        i++;
-    }
-}	
+	if (s == 0 || f == 0)
+		return ;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
+}

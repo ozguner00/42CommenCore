@@ -2,15 +2,18 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2024/11/16 15:26:56 by oguner            #+#    #+#             */
 /*   Updated: 2024/11/16 15:26:56 by oguner           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int ft_isalpha(int c){
-    return (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z') ) ;
+int	ft_isalpha(int c)
+{
+	return (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'));
 }

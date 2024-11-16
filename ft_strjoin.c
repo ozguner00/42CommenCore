@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oguner <oguner@student.42kocaeli.com.tr    +#+  +:+       +#+        */
+/*   By: meaydino <meaydino@student.42kocaeli.com.t +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:29:28 by oguner            #+#    #+#             */
-/*   Updated: 2024/11/16 15:29:29 by oguner           ###   ########.fr       */
+/*   Updated: 2024/11/16 16:25:44 by meaydino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

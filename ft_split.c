@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 
 static int	letter_count(const char *s, char c)
 {
