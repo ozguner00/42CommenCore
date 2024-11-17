@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 static void	ft_skip_and_sign(const char *str, int *index, int *sign)
 {
 	*index = 0;
